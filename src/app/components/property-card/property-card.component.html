@@ -1,0 +1,46 @@
+<a
+  [routerLink]="['/property', PropertyInfo?.id]"
+  class="text-primaryText bg-primaryBg body-font"
+>
+  <div class="container px-5 mx-auto">
+    <div class="flex flex-wrap">
+      <div>
+        <div
+          class="h-full border-2 border-secondaryText rounded-lg overflow-hidden"
+        >
+          <img
+            class="lg:h-48 md:h-36 w-full object-cover object-center"
+            src="{{ PropertyInfo?.coverPhoto?.url }}"
+            alt="blog"
+          />
+          <div class="p-6">
+            <div
+              class="bg-secondaryBg text-secondaryText rounded-lg inline-block p-2 capitalize font-bold"
+            >
+              {{ PropertyInfo?.purpose }}
+            </div>
+
+            <h1 class="title-font text-lg font-medium text-primaryText mb-3">
+              {{ PropertyInfo?.title }}
+            </h1>
+            <div class="flex flex-wrap">
+              <app-tag
+                *ngFor="let category of PropertyInfo?.category"
+                [tagInfo]="category.name"
+              ></app-tag>
+            </div>
+            <p class="leading-relaxed mb-3 text-secondaryText">
+              Contact: {{ PropertyInfo?.contactName }}
+            </p>
+            <p class="leading-relaxed mb-3 text-secondaryText">
+              Price: {{ PropertyInfo?.price }}
+            </p>
+            <p class="leading-relaxed mb-3 text-secondaryText">
+              Rent: {{ PropertyInfo?.rentFrequency }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</a>

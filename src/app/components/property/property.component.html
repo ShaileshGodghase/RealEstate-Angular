@@ -1,0 +1,11 @@
+<app-loader *ngIf="loading"></app-loader>
+
+<div
+  *ngIf="!loading"
+  class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-2 md:p-8"
+>
+  <app-property-card
+    *ngFor="let property of propertyInfo"
+    [PropertyInfo]="property"
+  ></app-property-card>
+</div>

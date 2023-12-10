@@ -1,0 +1,65 @@
+<header
+  class="text-primaryText bg-primaryBg body-font border-b-2 border-secondaryText"
+>
+  <div
+    class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"
+  >
+    <a
+      routerLink="/"
+      routerLinkActive="text-brandColor"
+      [routerLinkActiveOptions]="{ exact: true }"
+      class="flex title-font font-medium items-center text-white mb-4 md:mb-0"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+        ></path>
+      </svg>
+      <span class="ml-3 text-xl">Real Estate</span>
+    </a>
+    <nav
+      class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center"
+    >
+      <a
+        routerLink="/"
+        routerLinkActive="text-brandColor"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="mr-5 hover:text-brandColor"
+        >Home</a
+      >
+      <a
+        routerLink="/about"
+        routerLinkActive="text-brandColor"
+        class="mr-5 hover:text-brandColor"
+        >About</a
+      >
+      <a
+        routerLink="/contact"
+        routerLinkActive="text-brandColor"
+        class="mr-5 hover:text-brandColor"
+        >Contact</a
+      >
+      <a
+        routerLink="/property"
+        routerLinkActive="text-brandColor"
+        class="mr-5 hover:text-brandColor"
+        >Property</a
+      >
+    </nav>
+    <button
+      routerLink="/property"
+      class="inline-flex items-center bg-brandColor border-2 border-brandColor py-1 px-3 focus:outline-none hover:bg-primaryBg transition-all duration-300 rounded-full text-base mt-4 md:mt-0"
+    >
+      Explore
+    </button>
+  </div>
+</header>
